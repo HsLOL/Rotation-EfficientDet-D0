@@ -9,7 +9,7 @@
 ## :link: Update log:
 15/4 update requirements.txt  
 16/4 update the picture(DOTA format ---> OPENCV format)  
-![](https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/DOTA_toolkit/test.jpg)  
+![](./master/DOTA_toolkit/test.jpg)  
 ## you can do like this to run the code successfully.  
 
 `1. conda create -n <env_name> python=3.6`  
