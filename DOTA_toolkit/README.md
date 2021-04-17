@@ -20,9 +20,11 @@
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/DOTA_toolkit/horizontal.jpg" width="600" height="600"/>  
 * rotation transform iamge  
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/DOTA_toolkit/rotation.jpg" width="600" height="600"/>  
+
 ## you can do like this to run the code successfully.  
 `1. conda create -n <env_name> python=3.6`  
 `2. conda activate <env_name>`  
 `3. pip install -r requirements.txt`  
+
 ## Todo  
 - [ ] update the relevant code for transform
