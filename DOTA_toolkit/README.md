@@ -9,7 +9,7 @@
 ## :link: Update log:
 15/4 update requirements.txt  
 16/4 update the picture(DOTA format ---> OPENCV format)  
-<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/tree/master/DOTA_toolkit/test.jpg" width="375" height="400"/><br/>    
+<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/DOTA_toolkit/test.jpg" width="600" height="600"/>      
 ## you can do like this to run the code successfully.  
 
 `1. conda create -n <env_name> python=3.6`  
