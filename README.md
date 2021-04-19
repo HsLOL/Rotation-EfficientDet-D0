@@ -1,7 +1,7 @@
 ## A project for Rotaion Detector by Pytorch  
 ## Todo List  
-- [ ] Reimplentation /Efficientdet/dataset.py(as well as training_params and val_params)  
-- [X] Make the Rotation Dataset and make the anno file to json file(Maybe)  
+- [X] Reimplentation /Efficientdet/dataset.py(as well as training_params and val_params)(maybe have finished:))  
+- [X] Make the Rotation Dataset and make the anno file to json file(Maybe has finished:))  
 - [ ] Modified the efficientdet/model.Regressor() line 374 self.header() num_anchors x 5(x_c, y_c, width, height, theta)  
 - [ ] Follow the third step, should also notice the Regressor().forward() line 386-393  
 - [ ] Delete the `label smoothing` trick  
