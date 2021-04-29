@@ -1,14 +1,12 @@
 ## A project for Rotaion Detector by Pytorch  
-## Todo List  
-- [X] Reimplentation /Efficientdet/dataset.py(as well as training_params and val_params)(maybe have finished:))  
-- [X] Make the Rotation Dataset and make the anno file to json file(Maybe has finished:))  
-- [X] Modified the efficientdet/model.Regressor() line 374 self.header() num_anchors x 5(x_c, y_c, width, height, theta)  
-- [X] Follow the third step, should also notice the Regressor().forward() line 386-393  
-- [X] Delete the `label smoothing` trick  
-- [X] Modify the class Anchor() to add the parameter theta in utls.py(line 55)
-- [X] Add poly_iou loss.py line 102  
-- [X] calculate the regression loss in the loss.py line 181  
-- [X] Maybe also modified the smooth L1 loss to calculate the regression loss(loss.py line 183-187)-->modified the regression loss to smooth L1 loss.
-## The Next Step  
-* Finish the understanding and coding of skew IOU  
-* Finish the complete project about Rotation Detector
+This is my first project to finish the rotation detection by PyTorch.  
+## Update Log  
+[2021-04-14] Start this project.  
+[2021-04-14] Update the DOTA_toolkit, which is a general toolkit to help finishsome preprocess.  
+[2021-04-16 - 2021-04-29] Finished this project roughly, I find the current detector has the unsastisfactory performance, and I will try my best to sovle these problems soon.  
+[2021-04-29] Even the current rotation detector has a lower performace, I have already updated the relevant code.  
+## The next step  
+- [ ] Update the evaluation code for rotation detector.  
+- [ ] Update the result of the whole DOTA picture.  
+- [ ] Find and solve the problems that I find.  
+## The performance about the current detector  
