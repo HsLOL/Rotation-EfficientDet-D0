@@ -16,9 +16,9 @@ This is my first project to finish the rotation detection by PyTorch.
 
 ## How to start this project  
 * Prepare the environment(conda is recommended)  
-`conda create -n <env_name> python=3.6 
-conda activate <env_name> 
-you should install torch=1.7.0, torchvision=0.8.1, cudatoolkit=11.0, and you can to search command on PyTorch.org
+`conda create -n <env_name> python=3.6  
+conda activate <env_name>  
+you should install torch=1.7.0, torchvision=0.8.1, cudatoolkit=11.0, and you can to search command on PyTorch.org  
 pip install -r requirements.txt to install revelant`  
 * Compile and build the skew iou and rotaion nms module
 before you enjoy the code, you should also create the skew iou module and rotation nms module after complile some C++ and cython files.  
