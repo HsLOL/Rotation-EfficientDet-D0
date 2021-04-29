@@ -12,6 +12,8 @@ This is my first project to finish the rotation detection by PyTorch.
 - [ ] Finally finish this repo completely.  
 ## The performance about the current detector  
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/showresult.jpg" width="600" height="600"/>  
+
+
 ## How to start this project  
 * Prepare the environment(conda is recommended)  
 `conda create -n <env_name> python=3.6`  
