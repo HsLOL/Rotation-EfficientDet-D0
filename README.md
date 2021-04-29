@@ -23,6 +23,6 @@ This is my first project to finish the rotation detection by PyTorch.
 * Compile and build the skew iou and rotaion nms module
 before you enjoy the code, you should also create the skew iou module and rotation nms module after complile some C++ and cython files.  
 ## References  
-[link1](https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch)  
-[link2](https://zhuanlan.zhihu.com/p/358072483)
+[link1] (https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch)  
+[link2] (https://zhuanlan.zhihu.com/p/358072483)  
 My work is based on these very awesome open source contribution!
