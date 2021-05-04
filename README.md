@@ -7,12 +7,14 @@ This is my first project to finish the rotation detection by PyTorch.
 [2021-04-29] Even the current rotation detector has a lower performace, I have already updated the relevant code.  
 ## The next step  
 - [X] Update the evaluation code for rotation detector(Finished but no update).  
-- [ ] Update the result of the whole DOTA picture.  
+- [X] Update the result of the whole DOTA picture.  
 - [ ] Find and solve the problems that I find.  
 - [ ] Finish the multi scale images for training.  
 - [ ] Finally finish this repo completely.  
 ## The performance about the current detector  
-<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/showresult.jpg" width="600" height="600"/>  
+<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/ShowResult/showresult.jpg" width="600" height="600"/>  
+
+<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/ShowResult/Merged.jpg" width="600" height="600"/>
 
 
 ## How to start this project  
