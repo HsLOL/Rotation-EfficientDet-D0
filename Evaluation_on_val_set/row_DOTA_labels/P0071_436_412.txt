@@ -1,0 +1,4 @@
+imagesource:GoogleEarth
+gsd:0.115726939386
+356.0 445.0 336.0 442.0 342.0 410.0 360.0 413.0 small-vehicle 0
+121.0 58.0 132.0 51.0 150.0 76.0 138.0 83.0 small-vehicle 0

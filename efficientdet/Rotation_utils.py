@@ -1,10 +1,11 @@
 # coding=utf-8
 # for rotation detection
+# 此脚本的Anchor生成没有用到Kmeans聚类的结果
 import itertools
 import torch
 import torch.nn as nn
 import numpy as np
-from efficientdet.loss import Rectangle_area
+from efficientdet.Refine_Loss_v2 import Rectangle_area
 import math
 
 
@@ -30,8 +31,6 @@ class BBoxAddScores(nn.Module):
         # temp = torch.stack([single_xmin, single_ymin, single_xmax, single_ymax, single_theta, singel_scores]).t()
 
         return torch.stack([single_xmin, single_ymin, single_xmax, single_ymax, single_theta, singel_scores]).t()
-
-
 
 
 class Rotation_BBoxTransform(nn.Module):

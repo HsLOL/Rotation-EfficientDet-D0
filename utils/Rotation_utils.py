@@ -106,6 +106,9 @@ def postprocess(x, anchors, regression, classification, regressBoxes, clipBoxes,
     scores = torch.max(classification, dim=2, keepdim=True)[0]  # the max score of each anchor shape(1, len(anchor), 1)
     scores_over_thresh = (scores > threshold)[:, :, 0]
     temp_num = scores_over_thresh.sum()
+
+    # 可视化scores_over_thresh的anchor
+
     out = []
     for i in range(x.shape[0]):
         if scores_over_thresh[i].sum() == 0:
@@ -130,7 +133,6 @@ def postprocess(x, anchors, regression, classification, regressBoxes, clipBoxes,
         # rotation nms
         # 由于transformed_bboxes需要numpy类型的数据进行转换
         anchors_nms_idx = cpu_nms(transformed_bboxes.cpu().numpy(), iou_threshold)
-
         # 将anchors_nums_idx转换成Tensor类型
         anchors_nms_idx = torch.from_numpy(np.array(anchors_nms_idx)).cuda()
         if anchors_nms_idx.shape[0] != 0:

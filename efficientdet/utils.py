@@ -65,7 +65,7 @@ def generate_anchors(base_size, ratios, scales, rotations):
     anchors = np.zeros((num_anchors, 5))
 
     # scale base_size
-    anchors[:, 2:4] = base_size * np.tile(scales, (2, len(scales) * len(rotations))).T
+    anchors[:, 2:4] = base_size * np.tile(scales, (2, len(ratios) * len(rotations))).T
     for idx in range(len(ratios)):
         anchors[3 * idx: 3 * (idx + 1), 2] = anchors[3 * idx: 3 * (idx + 1), 2] * ratios[idx][0]
         anchors[3 * idx: 3 * (idx + 1), 3] = anchors[3 * idx: 3 * (idx + 1), 3] * ratios[idx][1]
@@ -116,8 +116,8 @@ class Anchors(nn.Module):
 
         self.strides = kwargs.get('strides', [2 ** x for x in self.pyramid_levels])  # 8, 16, 32, 64, 128
         self.scales = np.array(kwargs.get('scales', [2 ** 0, 2 ** (1.0 / 3.0), 2 ** (2.0 / 3.0)]))
-        self.ratios = kwargs.get('ratios', [(1.0, 1.0), (1.4, 0.7), (0.7, 1.4)])
-
+        # self.ratios = kwargs.get('ratios', [(1.0, 1.0), (1.4, 0.7), (0.7, 1.4)])  # 原始代码
+        self.ratios = kwargs.get('ratios', [(1.0, 1.0), (0.4, 1.1), (0.7, 2.5), (1.8, 0.5)])  # Kmeans生成
         self.base_sizes = [x * anchor_scale for x in self.strides]  # 4*8, 4* 16, 4* 32 ... 4* 128
         # add rotation
         if rotations is None:

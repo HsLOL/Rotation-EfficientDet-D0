@@ -41,7 +41,7 @@ def get_args():
     parser = argparse.ArgumentParser('A rotation detector based EfficientDet(Zylo117)')
     parser.add_argument('-p', '--project', type=str, default='rotation_vehicles', help='project file that contains parameters')
     parser.add_argument('-c', '--compound_coef', type=int, default=0, help='coefficients of efficientdet')
-    parser.add_argument('-n', '--num_workers', type=int, default=12, help='num_workers of dataloader')
+    parser.add_argument('-n', '--num_workers', type=int, default=8, help='num_workers of dataloader')
     parser.add_argument('--train_batch_size', type=int, default=4, help='The number of images per batch among all devices')
     parser.add_argument('--val_batch_size', type=int, default=8, help='the number of images per batch for val')
 
@@ -210,8 +210,6 @@ def train(opt):
                         # nn.init.constant_(m.bias, 0)
         model.apply(init_head)
         print('[Info] init head(regressor & classifier)')
-
-    # 检查模型的初始化情况
 
     # https://github.com/vacancy/Synchronized-BatchNorm-PyTorch
     # apply sync_bn when using multiple gpu and batch_size per gpu is lower than 4

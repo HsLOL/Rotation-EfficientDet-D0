@@ -1,23 +1,19 @@
 # coding=utf-8
-
+#
+# 对Zylo117的代码进行修改，目前最终的优化代码，适用于旋转目标检测
+#
 import torch
 import torch.nn as nn
 import cv2
 import numpy as np
-import polyiou
 import math
 from random import sample
+from polyiou import polyiou
 from decimal import Decimal
 import matplotlib.pyplot as plt
 
 # from efficientdet.utils import BBoxTransform, ClipBoxes
 # from utils.utils import postprocess, invert_affine, display
-
-
-"""分类损失使用Focal Loss损失函数
-1.修改回归损失中损失的计算公式
-2.修改Smooth L1 损失函数的计算公式 (optional) 
-"""
 
 
 def find_index(lists):

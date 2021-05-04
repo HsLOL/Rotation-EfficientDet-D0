@@ -1,3 +1,6 @@
+# coding=utf-8
+# Zylo117的代码
+
 import os
 import torch
 import numpy as np

@@ -1,4 +1,5 @@
 # coding=utf-8
+# 根据Zylo117进行修改，适用于旋转目标检测
 import os
 import torch
 import numpy as np

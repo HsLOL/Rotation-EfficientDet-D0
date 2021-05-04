@@ -2,6 +2,7 @@
 
 # Author: Zylo117
 # modified by Hs
+# 检测单张图片
 
 
 """
@@ -21,10 +22,15 @@ from utils.Rotation_utils import eval_preprocess, invert_affine, postprocess, ST
 
 compound_coef = 0
 force_input_size = None  # set None to use default size
-img_path = 'test/1114.jpg'
+
+img_path = 'test/P0454_954_412.jpg'
+# merge images
+# img_path = r'/home/fzh/Rotation-EfficinetDet/detect_big_pic_obb/SplitImages/P0116_89_412.jpg'
 
 # replace this part with your project's anchor config
-anchor_ratios = [(1.0, 1.0), (1.3, 0.8), (0.9, 0.5)]
+# anchor_ratios = [(1.0, 1.0), (1.3, 0.8), (0.9, 0.5)]  # not using Kmeans
+
+anchor_ratios = [(1.0, 1.0), (0.4, 1.1), (0.7, 2.5), (1.8, 0.5)]  # using Kmeans
 # anchor_ratios = [(1.0, 1.0), (2, 2), (0.7, 1.4)]  # 原始使用的长宽比
 anchor_scales = [2 ** 0, 2 ** (1.0 / 3.0), 2 ** (2.0 / 3.0)]
 
@@ -70,7 +76,7 @@ model = EfficientDetBackbone(compound_coef=compound_coef, num_classes=len(obj_li
 # model.load_state_dict(torch.load(f'logs/birdview_vehicles_efficientdet-d0.pth', map_location='cpu'))
 
 # 模型读取旋转框权重文件
-model.load_state_dict(torch.load(f'/home/fzh/Rotation-EfficinetDet/logs/rotation_vehicles/efficientdet-d0_18_2500.pth',
+model.load_state_dict(torch.load(f'/home/fzh/REfficientDetv1/logs/efficientdet-d0_49_13500.pth',
                                  map_location='cpu'))
 
 model.requires_grad_(False)

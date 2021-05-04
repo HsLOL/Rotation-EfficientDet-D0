@@ -1,0 +1,3 @@
+imagesource:GoogleEarth
+gsd:0.115726939386
+5.0 16.0 31.0 26.0 1.0 97.0 -26.0 88.0 large-vehicle 0
