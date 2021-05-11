@@ -2,7 +2,7 @@
 
 #### File Tree.  
 datasets  
-    --project_name
+    --project_name  
 		 --|train  --|*.jpg  
-         --|val --| *.jpg
-		 --|annotations  --|instances_train.json和instances_val.json
+         --|val --| *.jpg  
+		 --|annotations  --|instances_train.json 和 instances_val.json
