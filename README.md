@@ -38,9 +38,9 @@ cd utils/nms
 make
 ```  
 #### 3. Make the Dataset
-you can reference the dataset format through the link1  
+```you can reference the dataset format through the link1```
 #### 4. Prepare the weight file  
-you can get the weight file(EfficientDet-D0) from the link1  
+```you can get the weight file(EfficientDet-D0) from the link1```
 ## References  
 [link1] (https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch)  
 [link2] (https://zhuanlan.zhihu.com/p/358072483)  
