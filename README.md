@@ -29,14 +29,12 @@ the polyiou is used to calculate the skew iou and you can follow these steps to 
 cd polyiou  
 sudo apt-get install swig
 swig -c++ -python polyiou.i
-python setup.py build_ext --inplace
-```  
+python setup.py build_ext --inplace```
 #### 2.2. Install rotation nms module  
 the rotation nms is used in the inference step, and you can follow these steps to install it.  
 ```
 cd utils/nms
-make
-```  
+make```
 #### 3. Make the Dataset
 ```you can reference the dataset format through the link1```
 #### 4. Prepare the weight file  
