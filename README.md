@@ -21,8 +21,9 @@ This is my first project to finish the rotation detection by PyTorch.
 **Note**: If you meet some troubles about the environment, you can check the check.txt   
 #### 2.Compile and build the skew iou and rotaion nms module
 before you run the code, you should create the skew iou module and rotation nms module after complile some C++ and cython files.  
-##### 2.1 the polyiou is used to calculate the skew iou and you can follow these steps to install it  
-```cd polyiou  
+#### 2.1 the polyiou is used to calculate the skew iou and you can follow these steps to install it  
+```
+cd polyiou  
 swig -i polyiou.i
 ```
 ## References  
