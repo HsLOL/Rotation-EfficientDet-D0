@@ -19,18 +19,20 @@ conda create -n <env_name> python=3.6
 conda activate <env_name>  
 you should install torch=1.7.0, torchvision=0.8.1, cudatoolkit=11.0, and you can to search command on PyTorch.org
 pip install -r requirements.txt to install revelant  
-**Note**: If you meet some troubles about the environment, you can check the check.txt
-```   
+```  
+**Note**: If you meet some troubles about the environment, you can check the check.txt  
 #### 2.Compile and build the skew iou and rotaion nms module
 Before you run this project, you should create the skew iou module and rotation nms module after compliling some C++ and cython files.  
-#### 2.1 **Install polyiou module** the polyiou is used to calculate the skew iou and you can follow these steps to install it.  
+#### 2.1 Install polyiou module  
+the polyiou is used to calculate the skew iou and you can follow these steps to install it.  
 ```
 cd polyiou  
 sudo apt-get install swig
 swig -c++ -python polyiou.i
 python setup.py build_ext --inplace
 ```  
-#### 2.2 **Install rotation nms module** the rotation nms is used in the inference step, and you can follow these steps to install it.  
+#### 2.2 Install rotation nms module  
+the rotation nms is used in the inference step, and you can follow these steps to install it.  
 ```
 cd utils/nms
 make
