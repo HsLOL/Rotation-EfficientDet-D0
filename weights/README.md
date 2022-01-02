@@ -1,1 +1,1 @@
-## 用于存放预训练模型的权重
+#### This folder is used to save pre-trained horizontal detector weight file.
