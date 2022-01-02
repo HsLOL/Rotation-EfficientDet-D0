@@ -7,10 +7,8 @@ num_gpus: 1
 mean: [0.485, 0.456, 0.406]
 std: [0.229, 0.224, 0.225]
 
-# this anchor is adapted to the dataset
+# anchor settings is specified for custom dataset.
 anchors_scales: '[2 ** 0, 2 ** (1.0 / 3.0), 2 ** (2.0 / 3.0)]'
-# anchors_ratios: '[(1.0, 1.0), (1.5, 0.7), (0.7, 1.4)]'  # not using ming71 kmeans
-anchors_ratios: '[(1.0, 1.0), (0.4, 1.1), (0.7, 2.5), (1.8, 0.5)]'  # using kmeans 
-# Note: if use the kmeans anchor_ratios, you should change the anchor_ratio in the test.py, otherwise the error is params not match.
+anchors_ratios: '[(1.0, 1.0), (0.4, 1.1), (0.7, 2.5), (1.8, 0.5)]'  # Using K-means to get anchor ratio results
 
 obj_list: ['large-vehicle', 'small-vehicle']
