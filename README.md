@@ -1,4 +1,4 @@
-## :rocker:A Rotation Detector based EfficientDet PyTorch  
+## :rocket:A Rotation Detector based EfficientDet PyTorch  
 This is a rotation detector pytorch implementation based on EfficientDet horizontal detector.  
 The pytorch re-implement efficientdet is [here](https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch).  
 Original paper link is [here](https://arxiv.org/abs/1911.09070).
