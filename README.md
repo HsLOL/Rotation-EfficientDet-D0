@@ -7,12 +7,24 @@ Original paper link is [here](https://arxiv.org/abs/1911.09070).
 [2021-04-29] Finish this project roughly and add K-means algorithm.    
 [2021-05-04] Upload revelant scripts.  
 [2022-01-02] Perfect this repo and hope it will be helpful for some users who want to learn rotation detection.  
-## Performance of the implemented Rotation Detector  
+## :star2:Performance of the implemented Rotation Detector  
 ### Detection Performance on Small image.
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/pics/showresult.jpg" width="300" height="300"/>  
 
 ### Detection Performance on Big image. 
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/pics/Merged.jpg" width="300" height="300"/>  
+
+## :clap:My Experiment
+My custom rotation vehicle datasets (DOTA DataSet), trained rotation detector weight file, pre-trained horizontal detector (EfficientDet-d0), loss curve, evaluation metrics results is below, you could follow my experiment.  
+- Custom Dataset. [BaiduYun]()
+- trained rotation detector weight file [BaiduYun]()
+- pre-trained horizontal detector weight file (EfficientDet-d0) [BaiduYun]()
+- evaluation metrics
+|coefficient|Input Size|Large-vehicle(iou=.5)|Small-vehicle(iou=.5)|mAP(iou=.5)|
+|:---------:|:--------:|:-------------------:|:-------------------:|:---------:|
+|D0         |512 x 512 |0.5242               |0.6094               |0.5668     |
+- loss curce
+<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/pics/showresult.jpg" width="300" height="300"/>
 
 ## Get Started
 ### Installation  
