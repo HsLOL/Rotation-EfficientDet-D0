@@ -9,9 +9,10 @@ Original paper link is [here](https://arxiv.org/abs/1911.09070).
 [2022-01-02] Perfect this repo and hope it will be helpful for some users who want to learn rotation detection.  
 ## Performance of the implemented Rotation Detector  
 ### Detection Performance on Small image.
-<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/ShowResult/showresult.jpg" width="450" height="450"/>  
-### Detection Performance on Big image.
-<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/ShowResult/Merged.jpg" width="450" height="450"/>  
+<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/pics/showresult.jpg" width="450" height="450"/>  
+
+### Detection Performance on Big image. 
+<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/pics/Merged.jpg" width="450" height="450"/>  
 
 ## Get Started
 ### Installation  
@@ -96,4 +97,51 @@ anchors_ratios: '[(1.0, 1.0), (1.4, 0.7), (0.7, 1.4)]'
 # for example, index of 'car' here is 2, while category_id of is 3
 obj_list: ['person', 'bicycle', 'car', ...]
 
+```
+### 3.a. Train rotation detector on a custom dataset from scratch
+```
+# train rotation efficientdet-d0 on a custom dataset
+# with batchsize 32 and learning rate 5e-3
+
+python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3
+```
+### 3.b. Train rotation detector with pretrained weight file which is trained on horizontal datasets.
+```
+# train rotation efficientdet-d0 on a custom dataset with pretrained weights which is trained on horizontal datasets.
+# with batchsize 32 and learning rate 5e-3 for 10 epoches
+
+python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3 --num_epochs 10 \
+ --load_weights /path/to/your/weights/efficientdet-d0.pth
+
+# with a pretrained weight file, you can even freeze the backbone and train heads only
+# to speed up training and help convergence.
+
+python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3 --num_epochs 10 \
+ --load_weights /path/to/your/weights/efficientdet-d0.pth \
+ --head_only True
+```
+### 4. Early stopping a training session.
+```
+# while training, press Ctrl+c, the program will catch KeyboardInterrupt
+# and stop training, save current checkpoint.
+```
+### 5. Resume Training
+```
+# let says you started a training session like this.
+
+python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3 \
+ --load_weights /path/to/your/weights/efficientdet-d0.pth \
+ --head_only True
+
+# then you stopped it with a Ctrl+c, it exited with a checkpoint
+
+# now you want to resume training from the last checkpoint
+# simply set load_weights to 'last'
+
+python train.py -c 0 -p your_project_name --batch_size 16 --lr 1e-3 \
+ --load_weights last \
+ --head_only False
+```
+### Evaluation
+```
 ```
