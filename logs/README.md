@@ -1,1 +1,3 @@
-## 保存模型训练过程中生成的权重文件的文件夹
+This folder is used to save training result files:
+- tensorboard output files.
+- model checkpoint files during training.
