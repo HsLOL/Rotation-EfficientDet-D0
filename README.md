@@ -17,6 +17,7 @@ Original paper link is [here](https://arxiv.org/abs/1911.09070).
 ## :clap:My Experiment
 My custom rotation vehicle datasets (DOTA DataSet), trained rotation detector weight file, pre-trained horizontal detector (EfficientDet-d0), loss curve, evaluation metrics results is below, you could follow my experiment.  
 - Custom Dataset. [BaiduYun](https://pan.baidu.com/s/160ullAPABlTfRMX3JpR91g) `extraction code=6ul5`
+- gt labels for eval [BaiduYun](https://pan.baidu.com/s/13A9Yl8EW9OeXchOiUSxmcw) `extraction code=ii2d`
 - trained rotation detector weight file [BaiduYun](https://pan.baidu.com/s/1lXtXDQ5qwJde6hyYb95GDw) `extraction code=qep2`
 - pre-trained horizontal detector weight file (EfficientDet-d0) [Link](https://github.com/zylo117/Yet-Another-Efficient-Pytorch/releases/download/1.0/efficientdet-d0.pth)
 - evaluation metrics  
@@ -29,7 +30,7 @@ My custom rotation vehicle datasets (DOTA DataSet), trained rotation detector we
 
 ## Get Started
 ### Installation  
-Install requirements:
+#### A. Install requirements:
 ```
 conda create -n Rtdet python=3.7  
 conda activate Rtdet  
@@ -38,14 +39,14 @@ pip install -r requirements.txt
 
 Note: If you meet some troubles about installing environment, you can see the check.txt for more details.  
 ```
-Install skew iou module:
+#### B. Install skew iou module:
 ```
 cd polyiou
 sudo apt-get install swig
 swig -c++ -python polyiou.i
 python setup.py build_ext --inplace
 ```
-Install rotation nms module:
+#### C. Install rotation nms module:
 ```
 cd utils/nms
 make
@@ -57,7 +58,7 @@ you should download the trained weight file below and put the pth file into `log
 python show.py --img_path ./test/demo1.jpg --pth ./logs/rotation_vehicles/efficientdet-d0_48_3200.pth
 ```
 ## Train
-### 1. Prepare dataset
+### A. Prepare dataset
 ```
 # dataset structure should be like this
 datasets/
@@ -85,7 +86,7 @@ datasets/
             -instances_train2017.json
             -instances_val2017.json
 ```
-### 2. Manual set project's hyper parameters
+### B. Manual set project's hyper parameters
 ```
 # create a yml file {your_project_name}.yml under 'projects'folder
 # modify it following 'coco.yml'
@@ -111,14 +112,14 @@ anchors_ratios: '[(1.0, 1.0), (1.4, 0.7), (0.7, 1.4)]'
 obj_list: ['person', 'bicycle', 'car', ...]
 
 ```
-### 3.a. Train rotation detector on a custom dataset from scratch
+### C.1 Train rotation detector on a custom dataset from scratch
 ```
 # train rotation efficientdet-d0 on a custom dataset
 # with batchsize 32 and learning rate 5e-3
 
 python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3
 ```
-### 3.b. Train rotation detector with pretrained weight file which is trained on horizontal datasets.
+### C.2 Train rotation detector with pretrained weight file which is trained on horizontal datasets.
 ```
 # train rotation efficientdet-d0 on a custom dataset with pretrained weights which is trained on horizontal datasets.
 # with batchsize 32 and learning rate 5e-3 for 10 epoches
@@ -133,12 +134,12 @@ python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3 --num_epochs
  --load_weights /path/to/your/weights/efficientdet-d0.pth \
  --head_only True
 ```
-### 4. Early stopping a training session.
+### D. Early stopping a training session.
 ```
 # while training, press Ctrl+c, the program will catch KeyboardInterrupt
 # and stop training, save current checkpoint.
 ```
-### 5. Resume Training
+### E. Resume Training
 ```
 # let says you started a training session like this.
 
@@ -155,6 +156,31 @@ python train.py -c 0 -p your_project_name --batch_size 16 --lr 1e-3 \
  --load_weights last \
  --head_only False
 ```
-### Evaluation
+## Evaluation
+### A. Get evaluation result on custom dataset.
 ```
+# first, run `prepare.py` to get the `imgnamefile.txt` and `gt_labels` folder.
+python prepare.py
+
+# second, put the `gt_labels` in `/evaluation` folder.
+
+# third, get detection results (i.e. `result_classname` folder) on val dataset.
+python batch_inference.py
+
+# forth, get metrics result
+python eval.py
+```
+### B. file tree
+```
+# file structure should be like this.
+
+evaluation/
+    -gt_labels/
+        -*.txt
+    -result_classname
+        -Task1_{category_name}.txt
+    -batch_inference.py
+    -eval.py
+    -imgnamefile.txt
+    -prepare.py
 ```
