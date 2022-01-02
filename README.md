@@ -1,12 +1,11 @@
-## A project for Rotaion Detector by Pytorch  
-This is my first project to finish the rotation detection by PyTorch.  
+## A Rotation Detector based EfficientDet PyTorch  
+This is a rotation detector pytorch implementation based on EfficientDet horizontal detector. The pytorch re-implement efficientdet is here. original paper link is here.
 ## Update Log  
 [2021-04-14] Start this project.  
-[2021-04-14] Update the DOTA_toolkit, which is a general toolkit to help finish some preprocess.  
-[2021-04-29] Finished this project roughly, I find the current detector has the unsastisfactory performance, and I will use the K-means to solve the problem.  
-[2021-04-29] Even the current rotation detector with the K-meas has the map=0.62 for the `small-vehicle` and `large-vehicle`, I have already updated the relevant code.  
-[2021-05-04] Update the basic script.   
-## The performance about the current detector  
+[2021-04-29] Finish this project roughly and add K-means algorithm.    
+[2021-05-04] Upload revelant scripts.  
+[2022-01-02] Perfect this repo and hope it will be helpful for some users who want to learn rotation detection.  
+## Performance of the implemented Rotation Detector  
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/ShowResult/showresult.jpg" width="450" height="450"/>  
 
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/ShowResult/Merged.jpg" width="450" height="450"/>
