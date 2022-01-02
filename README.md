@@ -1,6 +1,6 @@
 ## :rocket:A Rotation Detector based EfficientDet PyTorch  
 This is a rotation detector pytorch implementation based on EfficientDet horizontal detector.  
-The pytorch re-implement efficientdet is [here](https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch).  
+The pytorch re-implement efficientdet horizontal detector is [here](https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch).  
 Original paper link is [here](https://arxiv.org/abs/1911.09070).
 ## :pushpin:Update Log  
 [2021-04-14] Start this project.  
@@ -16,16 +16,16 @@ Original paper link is [here](https://arxiv.org/abs/1911.09070).
 
 ## :clap:My Experiment
 My custom rotation vehicle datasets (DOTA DataSet), trained rotation detector weight file, pre-trained horizontal detector (EfficientDet-d0), loss curve, evaluation metrics results is below, you could follow my experiment.  
-- Custom Dataset. [BaiduYun]()
-- trained rotation detector weight file [BaiduYun]()
-- pre-trained horizontal detector weight file (EfficientDet-d0) [BaiduYun]()
+- Custom Dataset. [BaiduYun](https://pan.baidu.com/s/160ullAPABlTfRMX3JpR91g) `extraction code=6ul5`
+- trained rotation detector weight file [BaiduYun](https://pan.baidu.com/s/1lXtXDQ5qwJde6hyYb95GDw) `extraction code=qep2`
+- pre-trained horizontal detector weight file (EfficientDet-d0) [Link](https://github.com/zylo117/Yet-Another-Efficient-Pytorch/releases/download/1.0/efficientdet-d0.pth)
 - evaluation metrics  
 
 |coefficient|Input Size|Large-vehicle(iou=.5)|Small-vehicle(iou=.5)|mAP(iou=.5)|
 |:---------:|:--------:|:-------------------:|:-------------------:|:---------:|
 |D0         |512 x 512 |0.5242               |0.6094               |0.5668     |
 - loss curce  
-<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/pics/tensorboard结果.png" width="600" height="300"/>
+<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/pics/tensorboard结果.png" width="1000" height="300"/>
 
 ## Get Started
 ### Installation  
