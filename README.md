@@ -1,5 +1,5 @@
 ## A Rotation Detector based EfficientDet PyTorch  
-This is a rotation detector pytorch implementation based on EfficientDet horizontal detector. The pytorch re-implement efficientdet is here. original paper link is here.
+This is a rotation detector pytorch implementation based on EfficientDet horizontal detector. The pytorch re-implement efficientdet is here[https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch]. original paper link is here[https://arxiv.org/abs/1911.09070].
 ## Update Log  
 [2021-04-14] Start this project.  
 [2021-04-29] Finish this project roughly and add K-means algorithm.    
