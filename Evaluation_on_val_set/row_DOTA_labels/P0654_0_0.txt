@@ -1,3 +1,0 @@
-imagesource:GoogleEarth
-gsd:0.115726939386
-424.0 428.0 422.0 448.0 330.0 436.0 335.0 415.0 large-vehicle 0

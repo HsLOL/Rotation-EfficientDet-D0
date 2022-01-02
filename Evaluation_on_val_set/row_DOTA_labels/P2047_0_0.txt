@@ -1,3 +1,0 @@
-imagesource:GoogleEarth
-gsd:0.115726939386
-290.0 258.0 279.0 267.0 259.0 234.0 271.0 225.0 small-vehicle 0
