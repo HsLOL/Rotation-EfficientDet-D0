@@ -11,8 +11,9 @@ Original paper link is [here](https://arxiv.org/abs/1911.09070).
 ### Detection Performance on Small image.
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/ShowResult/showresult.jpg" width="450" height="450"/>  
 ### Detection Performance on Big image.
-<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/ShowResult/Merged.jpg" width="450" height="450"/>
-## Get Started  
+<img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/ShowResult/Merged.jpg" width="450" height="450"/>  
+
+## Get Started
 ### Installation  
 Install requirements:
 ```
@@ -21,7 +22,7 @@ conda activate Rtdet
 conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cudatoolkit=11.0 -c pytorch
 pip install -r requirements.txt  
 
-**Note**: If you meet some troubles about installing environment, you can see the check.txt for more details.
+Note: If you meet some troubles about installing environment, you can see the check.txt for more details.  
 ```
 Install skew iou module:
 ```
