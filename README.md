@@ -14,9 +14,9 @@ Original paper link is [here](https://arxiv.org/abs/1911.09070).
 ### Detection Performance on Big image. 
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/pics/Merged.jpg" width="300" height="300"/>  
 
-## :clap:My Experiment
+## :balloon:My Experiment
 My custom rotation vehicle datasets (DOTA DataSet), trained rotation detector weight file, pre-trained horizontal detector (EfficientDet-d0), loss curve, evaluation metrics results is below, you could follow my experiment.  
-- Custom Dataset. [BaiduYun](https://pan.baidu.com/s/160ullAPABlTfRMX3JpR91g) `extraction code=6ul5`
+- Custom Dataset [BaiduYun](https://pan.baidu.com/s/160ullAPABlTfRMX3JpR91g) `extraction code=6ul5`
 - gt labels for eval [BaiduYun](https://pan.baidu.com/s/13A9Yl8EW9OeXchOiUSxmcw) `extraction code=ii2d`
 - trained rotation detector weight file [BaiduYun](https://pan.baidu.com/s/1lXtXDQ5qwJde6hyYb95GDw) `extraction code=qep2`
 - pre-trained horizontal detector weight file (EfficientDet-d0) [Link](https://github.com/zylo117/Yet-Another-Efficient-Pytorch/releases/download/1.0/efficientdet-d0.pth)
@@ -184,6 +184,6 @@ evaluation/
     -imgnamefile.txt
     -prepare.py
 ```
-## References
+## :bulb:References
 My work mainly follow this repo, thanks for this great work.  
 [https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch](https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch)
