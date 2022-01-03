@@ -28,7 +28,7 @@ My custom rotation vehicle datasets (DOTA DataSet), trained rotation detector we
 - loss curce  
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/pics/tensorboard结果.png" width="1000" height="300"/>
 
-## Get Started
+## :boom:Get Started
 ### Installation  
 #### A. Install requirements:
 ```
