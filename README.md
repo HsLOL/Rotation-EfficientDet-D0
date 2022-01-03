@@ -88,8 +88,8 @@ datasets/
             -instances_val2017.json
 ```
 ### B. Manual set project's hyper parameters
-```
 you should create your own yml file under `projects` folder. My experiment yml file is `rotation_vehicles.yml`.
+```
 # create a yml file {your_project_name}.yml under 'projects' folder
 # modify it following 'coco.yml'
 
