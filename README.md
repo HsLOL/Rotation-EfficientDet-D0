@@ -52,13 +52,14 @@ cd utils/nms
 make
 ```
 ## Demo
-you should download the trained weight file below and put the pth file into `log` folder.
+you should download the trained weight file below and put the pth file into `log` folder and the `rotation_vehilces` is my project\_name.
 ```
 # run the simple inference script to get detection result.
 python show.py --img_path ./test/demo1.jpg --pth ./logs/rotation_vehicles/efficientdet-d0_48_3200.pth
 ```
 ## Train
-### A. Prepare dataset
+### A. Prepare dataset  
+you should put your dataset into `datasets` folder and the file tree is below.
 ```
 # dataset structure should be like this
 datasets/
@@ -88,7 +89,8 @@ datasets/
 ```
 ### B. Manual set project's hyper parameters
 ```
-# create a yml file {your_project_name}.yml under 'projects'folder
+you should create your own yml file under `projects` folder. My experiment yml file is `rotation_vehicles.yml`.
+# create a yml file {your_project_name}.yml under 'projects' folder
 # modify it following 'coco.yml'
 
 # for example
@@ -117,20 +119,21 @@ obj_list: ['person', 'bicycle', 'car', ...]
 # train rotation efficientdet-d0 on a custom dataset
 # with batchsize 32 and learning rate 5e-3
 
-python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3
+python train.py -c 0 -p your_project_name --train_batch_size 32 --lr 5e-3
 ```
 ### C.2 Train rotation detector with pretrained weight file which is trained on horizontal datasets.
+you should download the pretrained horizontal detector weight file and put this pth file into `weights` folder.
 ```
 # train rotation efficientdet-d0 on a custom dataset with pretrained weights which is trained on horizontal datasets.
 # with batchsize 32 and learning rate 5e-3 for 10 epoches
 
-python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3 --num_epochs 10 \
+python train.py -c 0 -p your_project_name --train_batch_size 32 --lr 5e-3 --num_epochs 10 \
  --load_weights /path/to/your/weights/efficientdet-d0.pth
 
 # with a pretrained weight file, you can even freeze the backbone and train heads only
 # to speed up training and help convergence.
 
-python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3 --num_epochs 10 \
+python train.py -c 0 -p your_project_name --train_batch_size 32 --lr 5e-3 --num_epochs 10 \
  --load_weights /path/to/your/weights/efficientdet-d0.pth \
  --head_only True
 ```
@@ -143,7 +146,7 @@ python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3 --num_epochs
 ```
 # let says you started a training session like this.
 
-python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3 \
+python train.py -c 0 -p your_project_name --train_batch_size 32 --lr 5e-3 \
  --load_weights /path/to/your/weights/efficientdet-d0.pth \
  --head_only True
 
@@ -152,7 +155,7 @@ python train.py -c 0 -p your_project_name --batch_size 32 --lr 5e-3 \
 # now you want to resume training from the last checkpoint
 # simply set load_weights to 'last'
 
-python train.py -c 0 -p your_project_name --batch_size 16 --lr 1e-3 \
+python train.py -c 0 -p your_project_name --train_batch_size 16 --lr 1e-3 \
  --load_weights last \
  --head_only False
 ```
