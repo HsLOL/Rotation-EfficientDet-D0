@@ -184,3 +184,6 @@ evaluation/
     -imgnamefile.txt
     -prepare.py
 ```
+## References
+My work mainly follow this repo, thanks for this great work.
+[https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch](https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch)
