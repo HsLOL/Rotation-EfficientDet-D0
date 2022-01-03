@@ -14,7 +14,7 @@ Original paper link is [here](https://arxiv.org/abs/1911.09070).
 ### Detection Performance on Big image. 
 <img src="https://github.com/HsLOL/Rotation-EfficientDet-D0/blob/master/pics/Merged.jpg" width="300" height="300"/>  
 
-## :balloon:My Experiment
+## :dart:My Experiment
 My custom rotation vehicle datasets (DOTA DataSet), trained rotation detector weight file, pre-trained horizontal detector (EfficientDet-d0), loss curve, evaluation metrics results is below, you could follow my experiment.  
 - Custom Dataset [BaiduYun](https://pan.baidu.com/s/160ullAPABlTfRMX3JpR91g) `extraction code=6ul5`
 - gt labels for eval [BaiduYun](https://pan.baidu.com/s/13A9Yl8EW9OeXchOiUSxmcw) `extraction code=ii2d`
