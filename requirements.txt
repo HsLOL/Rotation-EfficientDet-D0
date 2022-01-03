@@ -1,0 +1,9 @@
+Cython==0.29.26
+matplotlib==3.5.1
+numpy==1.21.2
+opencv_python==4.4.0.46
+pycocotools==2.0.3
+PyYAML==6.0
+tensorboardX==2.4.1
+tqdm==4.62.3
+webcolors==1.11.1
